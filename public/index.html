@@ -1,16 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang ="en">
+
+<!-- //set the title of my tracking app and imported the css file and my custom font which was taken from fontawesome.com -->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/style.css">
-    <title>RepTrack Workout Tracker</title>
+  <title>RepTrack App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a75434d215.js" crossorigin="anonymous"></script>
 </head>
+<!-- //set up my overarching container and my main header which is displayed over the landingpage image of the workout -->
 <body>
-    <header>
-        <h1>RepTrack</h1>
+  <div class="main-div">
+    <header class="header-div">
+      <h1>RepTrack</h1>
     </header>
-    <script src="public/script.js"></script>
+<!-- //set up the image div and imported my fitness img file -->
+        <div class="image-div">
+            <img src="img/fitguy.avif" alt="Fitness img">
+        </div>
+<!-- //here i set up the container for the form which users use to imput their workour info and added a header to tell them what to do -->
+    <div class="form-container">
+      <form id="workoutForm">
+            <h2>Log Your Exercise</h2>
+<!-- //here i assigned each input field into the form-div container and labeled the exercise, sets, and reps. Also added the required to each so they the form had to be filled out  -->
+            <div class="form-div">
+            <label for="exerciseName">Exercise Type: </label>
+            <input type="text" id="exerciseName" name="exerciseName" required= "true">
+                </div>
+
+            <div class="form-div">
+            <label for="sets">Number of Sets:</label>
+            <input type="number" id="sets" name="sets" min="1" required="true">
+            </div>
+
+            <div class="form-div">
+            <label for="reps">Number of Reps: </label>
+            <input type="number" id="reps" name="reps" min="1" required="true">
+            </div>
+<!-- //added the submission button for the users to submit their exercise data -->
+            <button type="submit">Log Your Exercise</button>
+
+      </form>
+    </div>
+<!-- //this div holds the list of the users completed exercises which can be stored  -->
+    <div class="log-div">
+        <h2>Your Saved Exercises</h2>
+        <ul id="exerciseLog"></ul>
+    </div>
+  </div>
+<!-- //added the js tag to the html -->
+  <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,126 @@
+/* impoted my custom font for my webpage */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+
+/* added smooth scrolling behavior for the entirerty of my html */
+
+html
+{
+scroll-behavior: smooth;
+}
+
+
+/* set up the box sizing and added the font to the whole of my app */
+
+*{
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif
+    
+}
+
+/* adapted the button properties to pop out a bit  */
+button {
+cursor: pointer;
+background-color: rgba(218, 60, 60, 0.514);
+font-weight: bold;
+}
+
+button:hover {
+transform: scale(1.07);
+}
+/* i wanted most of my content to be centered so the user experience was similar for both desktop and mobile users. this makes it easier for users to navigate when using different devices */
+/* added flex for screen responsiveness */
+.main-div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 170vh;
+  }
+  /* / */ 
+  .header-div
+   {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  /* header postitioning was tedious */
+  .header-div h1 
+  {
+    font-size: 80px;
+    color: #d61414;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+
+  .image-div 
+  {
+    position: relative;
+  }
+  
+
+  .image-div img 
+  {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  .form-container 
+  {
+    width: 400px;
+    margin-bottom: 30px;
+  }
+  
+
+
+  .form-div 
+  {
+    margin-bottom: 20px;
+  }
+  
+  label 
+  {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  /* adapted the input fields so they popped out a bit */
+  input[type="text"],
+  input[type="number"] 
+  {
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+    border: 3px solid #df2525;
+    border-radius: 6px;
+  }
+  
+/* added scrollability to the logged workout section and made it so it wasnt't too squished */
+
+  .log-div 
+  {
+    width: 500px;
+    background-color: #cfbcbc;
+    padding: 30px;
+    list-style-type: none;
+    overflow-y: scroll;
+    height: 50px;
+    margin-bottom: 30px;
+    max-height: calc(100vh - 200px); 
+    
+  }
+  
+
+  h2 
+  {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
